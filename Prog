@@ -1,0 +1,165 @@
+func start() (
+    matrix cell maze <- [[(top, nright, ndown, left), (top, nright, ndown, nleft), (top, nright, ndown, nleft), (top, nright, ndown, nleft), (top, nright, ndown, nleft), (top, right, ndown, nleft), (top, nright, ndown, left), (top, nright, ndown, nleft), (top, nright, ndown, nleft), (top, nright, ndown, nleft), (top, nright, ndown, nleft), (top, right, ndown, nleft), (top, nright, ndown, left), (top, nright, ndown, nleft), (top, right, ndown, nleft)],
+    [(ntop, nright, ndown, left), (ntop, nright, ndown, nleft), (ntop, nright, ndown, nleft), (ntop, nright, ndown, nleft), (ntop, nright, ndown, nleft), (ntop, right, ndown, nleft), (ntop, nright, ndown, left), (ntop, nright, ndown, nleft), (ntop, nright, ndown, nleft), (ntop, nright, ndown, nleft), (ntop, nright, ndown, nleft), (ntop, right, ndown, nleft), (ntop, nright, ndown, left), (ntop, nright, ndown, nleft), (ntop, nright, ndown, nleft)],
+    [(ntop, nright, down, left), (ntop, nright, down, nleft), (ntop, nright, down, nleft), (ntop, nright, ndown, nleft), (ntop, nright, ndown, nleft), (ntop, right, ndown, nleft), (ntop, nright, ndown, left), (ntop, nright, ndown, nleft), (ntop, nright, ndown, nleft), (ntop, nright, down, nleft), (ntop, nright, down, nleft), (ntop, right, down, nleft), (ntop, nright, ndown, left), (ntop, nright, ndown, nleft), (ntop, right, ndown, nleft)],
+    [(top, nright, ndown, left), (top, nright, ndown, nleft), (top, nright, ndown, nleft), (ntop, nright, ndown, nleft), (ntop, nright, ndown, nleft), (ntop, right, ndown, nleft), (ntop, nright, ndown, left), (ntop, nright, ndown, nleft), (ntop, nright, ndown, nleft), (top, nright, ndown, nleft), (top, nright, ndown, nleft), (top, nright, ndown, nleft), (ntop, nright, ndown, nleft), (ntop, nright, ndown, nleft), (ntop, right, ndown, nleft)],
+    [(ntop, nright, ndown, left), (ntop, nright, ndown, nleft), (ntop, nright, ndown, nleft), (ntop, nright, ndown, nleft), (ntop, nright, ndown, nleft), (ntop, right, ndown, nleft), (ntop, nright, ndown, left), (ntop, nright, ndown, nleft), (ntop, nright, ndown, nleft), (ntop, nright, ndown, nleft), (ntop, nright, ndown, nleft), (ntop, nright, ndown, nleft), (ntop, nright, ndown, nleft), (ntop, nright, ndown, nleft), (ntop, right, ndown, nleft)],
+    [(ntop, nright, ndown, left), (ntop, nright, ndown, nleft), (ntop, nright, ndown, nleft), (ntop, nright, down, nleft), (ntop, nright, down, nleft), (ntop, right, down, nleft), (ntop, nright, ndown, left), (ntop, nright, ndown, nleft), (ntop, nright, ndown, nleft), (ntop, nright, down, nleft), (ntop, nright, down, nleft), (ntop, nright, down, nleft), (ntop, nright, down, nleft), (ntop, nright, down, nleft), (ntop, right, down, nleft)],
+    [(ntop, nright, ndown, left), (ntop, nright, ndown, nleft), (ntop, right, ndown, nleft), (top, nright, ndown, left), (top, nright, ndown, nleft), (top, right, ndown, nleft), (ntop, nright, ndown, left), (ntop, nright, ndown, nleft), (ntop, nright, ndown, nleft), (top, nright, ndown, nleft), (top, nright, ndown, nleft), (top, nright, ndown, nleft), (top, nright, ndown, nleft), (top, nright, ndown, nleft), (top, right, ndown, nleft)],
+    [(ntop, nright, ndown, left), (ntop, nright, ndown, nleft), (ntop, right, ndown, nleft), (ntop, nright, ndown, left), (ntop, nright, ndown, nleft), (ntop, right, ndown, nleft), (ntop, nright, ndown, left), (ntop, nright, ndown, nleft), (ntop, nright, ndown, nleft), (ntop, nright, ndown, nleft), (ntop, nright, ndown, nleft), (ntop, nright, ndown, nleft), (ntop, nright, ndown, nleft), (ntop, nright, ndown, nleft), (ntop, right, ndown, nleft)],
+    [(ntop, nright, ndown, left), (ntop, nright, ndown, nleft), (ntop, right, ndown, nleft), (ntop, nright, ndown, left), (ntop, nright, ndown, nleft), (ntop, right, ndown, nleft), (ntop, nright, down, left), (ntop, nright, down, nleft), (ntop, nright, down, nleft), (ntop, nright, ndown, nleft), (ntop, nright, ndown, nleft), (ntop, nright, ndown, nleft), (ntop, nright, down, nleft), (ntop, nright, down, nleft), (ntop, right, down, nleft)],
+    [(ntop, nright, ndown, left), (ntop, nright, ndown, nleft), (ntop, nright, ndown, nleft), (ntop, nright, ndown, nleft), (ntop, nright, ndown, nleft), (ntop, nright, ndown, nleft), (top, nright, ndown, nleft), (top, nright, ndown, nleft), (top, nright, ndown, nleft), (ntop, nright, ndown, nleft), (ntop, nright, ndown, nleft), (ntop, nright, ndown, nleft), (top, nright, ndown, nleft), (top, nright, ndown, nleft), (top, right, ndown, nleft)],
+    [(ntop, nright, ndown, left), (ntop, nright, ndown, nleft), (ntop, nright, ndown, nleft), (ntop, nright, ndown, nleft), (ntop, nright, ndown, nleft), (ntop, nright, ndown, nleft), (ntop, nright, ndown, nleft), (ntop, nright, ndown, nleft), (ntop, nright, ndown, nleft), (ntop, nright, ndown, nleft), (ntop, nright, ndown, nleft), (ntop, nright, ndown, nleft), (ntop, nright, ndown, nleft), (ntop, nright, ndown, nleft), (ntop, right, ndown, nleft)],
+    [(ntop, nright, down, left), (ntop, nright, down, nleft), (ntop, nright, down, nleft), (ntop, nright, down, nleft), (ntop, nright, down, nleft), (ntop, nright, down, nleft), (ntop, nright, down, nleft), (ntop, nright, down, nleft), (ntop, nright, down, nleft), (ntop, nright, down, nleft), (ntop, nright, down, nleft), (ntop, nright, down, nleft), (ntop, nright, down, nleft), (ntop, nright, down, nleft), (ntop, right, down, nleft)]];
+
+    matrix unsigned robot <- [[2], [2]];
+    unsigned direction <- 0;
+    unsigned buf;
+    unsigned tmp <- 0;
+    unsigned go <- 0;
+    unsigned end <- 0;
+    unsigned x <- 2;
+    unsigned y <- 2;
+    unsigned endX <- 14;
+    unsigned endY <- 1;
+
+    testrep(end = 0) (
+        go <- 0;
+        tmp <- direction;
+        buf <- direction;
+        tmp <- tmp + 1;
+        tmp <- tmp % 4;
+        testonce(maze(y, x, tmp) = 'ntop') (
+            direction <- tmp;
+            go <- 1;
+        )
+        testonce(maze(y, x, tmp) = 'nright') (
+            direction <- tmp;
+            go <- 1;
+            )    
+        testonce(maze(y, x, tmp) = 'ndown') (
+            direction <- tmp;
+            go <- 1;
+        )
+        testonce(maze(y, x, tmp) = 'nleft') (
+            direction <- tmp;
+            go <- 1;
+        )
+        testonce(maze(y, x, tmp) = 'top') (
+            testonce(maze(y, x, buf) = 'ntop')   (go <- 1; direction <- buf;)    
+            testonce(maze(y, x, buf) = 'nright') (go <- 1; direction <- buf;)
+            testonce(maze(y, x, buf) = 'ndown')  (go <- 1; direction <- buf;)
+            testonce(maze(y, x, buf) = 'nleft')  (go <- 1; direction <- buf;)
+            testonce(maze(y, x, buf) = 'top') (
+                direction <- direction + 3;
+                direction <- direction % 4;
+            )    
+            testonce(maze(y, x, buf) = 'right') (
+                direction <- direction + 3;
+                direction <- direction % 4;
+            )
+            testonce(maze(y, x, buf) = 'down') (
+                direction <- direction + 3;
+                direction <- direction % 4;
+            )
+            testonce(maze(y, x, buf) = 'left') (
+                direction <- direction + 3;
+                direction <- direction % 4;
+            )
+        )
+        testonce(maze(y, x, tmp) = 'right') (
+            testonce(maze(y, x, buf) = 'ntop')   (go <- 1; direction <- buf;)    
+            testonce(maze(y, x, buf) = 'nright') (go <- 1; direction <- buf;)
+            testonce(maze(y, x, buf) = 'ndown')  (go <- 1; direction <- buf;)
+            testonce(maze(y, x, buf) = 'nleft')  (go <- 1; direction <- buf;)
+            testonce(maze(y, x, buf) = 'top') (
+                direction <- direction + 3;
+                direction <- direction % 4;
+            )    
+            testonce(maze(y, x, buf) = 'right') (
+                direction <- direction + 3;
+                direction <- direction % 4;
+            )
+            testonce(maze(y, x, buf) = 'down') (
+                direction <- direction + 3;
+                direction <- direction % 4;
+            )
+            testonce(maze(y, x, buf) = 'left') (
+                direction <- direction + 3;
+                direction <- direction % 4;
+            )
+        )
+        testonce(maze(y, x, tmp) = 'down') (
+            testonce(maze(y, x, buf) = 'ntop')   (go <- 1; direction <- buf;)    
+            testonce(maze(y, x, buf) = 'nright') (go <- 1; direction <- buf;)
+            testonce(maze(y, x, buf) = 'ndown')  (go <- 1; direction <- buf;)
+            testonce(maze(y, x, buf) = 'nleft')  (go <- 1; direction <- buf;)
+            testonce(maze(y, x, buf) = 'top') (
+                direction <- direction + 3;
+                direction <- direction % 4;
+            )    
+            testonce(maze(y, x, buf) = 'right') (
+                direction <- direction + 3;
+                direction <- direction % 4;
+            )
+            testonce(maze(y, x, buf) = 'down') (
+                direction <- direction + 3;
+                direction <- direction % 4;
+            )
+            testonce(maze(y, x, buf) = 'left') (
+                direction <- direction + 3;
+                direction <- direction % 4;
+            )
+        )
+        testonce(maze(y, x, tmp) = 'left') (
+            testonce(maze(y, x, buf) = 'ntop')   (go <- 1; direction <- buf;)    
+            testonce(maze(y, x, buf) = 'nright') (go <- 1; direction <- buf;)
+            testonce(maze(y, x, buf) = 'ndown')  (go <- 1; direction <- buf;)
+            testonce(maze(y, x, buf) = 'nleft')  (go <- 1; direction <- buf;)
+            testonce(maze(y, x, buf) = 'top') (
+                direction <- direction + 3;
+                direction <- direction % 4;
+            )    
+            testonce(maze(y, x, buf) = 'right') (
+                direction <- direction + 3;
+                direction <- direction % 4;
+            )
+            testonce(maze(y, x, buf) = 'down') (
+                direction <- direction + 3;
+                direction <- direction % 4;
+            )
+            testonce(maze(y, x, buf) = 'left') (
+                direction <- direction + 3;
+                direction <- direction % 4;
+            )
+        )
+        testonce(go = 1) (
+            testonce(direction = 0) (top   y <- y - 1;)
+            testonce(direction = 1) (right x <- x + 1;)
+            testonce(direction = 2) (down  y <- y + 1;)
+            testonce(direction = 3) (left  x <- x - 1;) 
+        )   
+        testonce(x = endX) (
+            testonce(y = endY) (end <- 100;)
+        )
+    )
+)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

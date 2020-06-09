@@ -1,0 +1,17 @@
+func start() (
+	unsigned factNumber <- 7;
+	unsigned factCalc <- call fact(factNumber);
+)
+
+func fact (unsigned N) (
+	unsigned tmp;
+	testonce(N < 0) 
+		(tmp <- 0;)
+	testonce(N = 0)
+		(tmp <- 1;)
+	testonce(N > 0) (
+		unsigned new <- N;
+		N <- N -1;
+		tmp <- new * call fact(N);
+	)
+)

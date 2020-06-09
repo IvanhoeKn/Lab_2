@@ -1,0 +1,10 @@
+func start()
+(unsigned t <- call ff(6);)
+
+func ff(unsigned f)
+(
+testonce(f = 0)
+(unsigned r <- f + 1;)
+testonce(f > 0)
+(unsigned r <- f * call ff(f - 1);)
+)
